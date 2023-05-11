@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: ["./public/**/*.{html,js}"],
   theme: {
@@ -6,6 +6,10 @@ module.exports = {
       fontFamily:"Vazir",
     },
   },
-  plugins: [],
-}
+  plugins: [
+    require("@tailwindcss/forms")({
+      strategy:"class",
+    }),
+  ],
+};
 
