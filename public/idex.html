@@ -1,4 +1,4 @@
-<!doctype html >
+<!doctype html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -47,55 +47,72 @@
         <span class="text-sm text-slate-800 mr-4">فیلتر:اپل</span>
     </div>
  </div>
- <!-- product section -mobile -->
-<div class="grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-    <div class="bg-white rounded-xl p-2 shadow-md">
-        <div class="mb-3 bg-gray-100 rounded-xl p-2">
-            <img src="/assets/images/image-removebg-preview.png" alt="">
-        </div>
-        <!-- product-desc -->
-        <div class="flex items-center justify-between w-full mb-3">
-            <span class="text-slate-200  text-sm md:text-base">اپل</span>
-            <div X-data="{color: 'red'}" class="flex items-center">
-               
-<div @click="color ='red'"class="w-6  p-1 sm:w-8 sm:h-8 h-6 rounded-full  cursor-pointer bg-red-400  border-1 border-white -mr-1.5">
-    <svg x-show="color === 'red'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
-    class="w-5 stroke-white h-5 sm:w-5 sm:h-5 flex items-center justify-center">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-      </svg>
-      
-</div>
-<div @click="color ='green'"class="w-6 p-1 sm:w-8 sm:h-8 h-6 rounded-full ring cursor-pointer bg-green-400 -mr-1 border-1 border-white ">
-    <svg x-show="color === 'green'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-     class="w-5  stroke-white h-5 sm:w-5 sm:h-5  flex items-center justify-center">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-      </svg>
-</div>
-<div @click="color ='blue'"class="w-6 p-1 sm:w-8 sm:h-8 h-6 rounded-full ring ring-blue-400 cursor-pointer bg-blue-400 -mr-1 border-1 border-white ">
-    <svg x-show="color === 'blue'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-     class="w-5  stroke-white h-5  sm:w-5 sm:h-5 flex items-center justify-center">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-      </svg>
-</div>
-            </div>
-        </div>
-        <!--product title  -->
-        <div class="text-slate-800 text-xs font-bold mb-2 md:text-base">ساعت هوشمند اپل سری 6</div>
-        <div class="text-orange-600 font-medium text-center text-sm mb-3">تومان۱۲۳,۴۵۶,۷۸</div>
-        <hr>
-<button class="w-full font-bold text-orange-600 py-1 md:text-lg">مشاهده و سفارش</button>
-    </div>
+<!-- product section -->
+ <div class="grid grid-cols-12 md:grid-rows-[55px_minmax(500px,1fr)] md:gap-8">
+    <!-- sideBar -->
+    <div class="bg-white p-4 hidden md:block col-span-4 lg:col-span-3 row-span-2">sidebar</div>
+    <!-- ssort section -->
+    <div class="bg-white p-4 hidden md:block col-span-8 lg:col-span-9">sort section</div>
+   <!-- product-section -desktop -->
+   <div class="  col-span-12 md:col-span-8 md:px-0 lg:col-span-9">
+    <div
+x-data="{
+    products :[
+    {id:1,title:'ساعت هوشمند اپل سری 7', price:'۱۲۳,۴۵۶,۷۸'},
+    {id:2,title:'ساعت هوشمند اپل سری 7', price:'۱۲۳,۴۵۶,۷۸'},
+    {id:3,title:'ساعت هوشمند اپل سری 7', price:'۱۲۳,۴۵۶,۷۸'},
+    {id:4,title:'ساعت هوشمند اپل سری 7', price:'۱۲۳,۴۵۶,۷۸'},
+    {id:5,title:'ساعت هوشمند اپل سری 7', price:'۱۲۳,۴۵۶,۷۸'},
+    ]
+}"
+class="grid gap-2 gap-y-4 grid-cols-2  lg:grid-cols-4 px-2 sm:gap-x-4 md:gap-x-8">
+    <!-- product single -->
+    <template x-for="product in products" :key="product.id">
 
-    <div class="bg-blue-100">2</div>
-    <div class="bg-blue-100">3</div>
-    <div class="bg-blue-100">4</div>
-    <div class="bg-blue-100">5</div>
-    <div class="bg-blue-100">6</div>
-    <div class="bg-blue-100">7</div>
-    <div class="bg-blue-100">8</div>
-    <div class="bg-blue-100">9</div>
-    <div class="bg-blue-100">10</div>
+        <div class="bg-white rounded-xl p-2 shadow-md">
+            <div class="mb-3 bg-gray-100 rounded-xl p-2">
+                <img src="/assets/images/image-removebg-preview.png" alt="">
+            </div>
+            <!-- product-desc -->
+            <div class="flex items-center justify-between w-full mb-3">
+                <span class="text-slate-200  text-sm md:text-base">اپل</span>
+                <div X-data="{color: 'red'}" class="flex items-center">
+                   
+    <div @click="color ='red'"class="w-6  p-1 sm:w-8 sm:h-8 h-6 rounded-full  cursor-pointer bg-red-400  border-1 border-white -mr-1.5">
+        <svg x-show="color === 'red'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
+        class="w-5 stroke-white h-5 sm:w-5 sm:h-5 flex items-center justify-center">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+          </svg>
+          
+    </div>
+    <div @click="color ='green'"class="w-6 p-1 sm:w-8 sm:h-8 h-6 rounded-full cursor-pointer bg-green-400 -mr-1 border-1 border-white ">
+        <svg x-show="color === 'green'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+         class="w-5  stroke-white h-5 sm:w-5 sm:h-5  flex items-center justify-center">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+          </svg>
+    </div>
+    <div @click="color ='blue'"class="w-6 p-1 sm:w-8 sm:h-8 h-6 rounded-full cursor-pointer bg-blue-400 -mr-1 border-1 border-white ">
+        <svg x-show="color === 'blue'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+         class="w-5  stroke-white h-5  sm:w-5 sm:h-5 flex items-center justify-center">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+          </svg>
+    </div>
+                </div>
+            </div>
+            <!--product title  -->
+            <div x-text="product.title" class="text-slate-800 text-xs font-bold mb-2 sm:text-base">ساعت هوشمند اپل سری 6</div>
+            <div x-text="product.price" class="text-orange-600 font-medium text-center sm:text-lg text-sm mb-3">تومان۱۲۳,۴۵۶,۷۸</div>
+            <hr>
+    <button class="w-full font-bold text-orange-600 py-1 md:text-lg">مشاهده و سفارش</button>
+        </div>
+    </template>
+
 </div>
+   </div>
+</div>
+
+
+
 
 </body>
 </html>
